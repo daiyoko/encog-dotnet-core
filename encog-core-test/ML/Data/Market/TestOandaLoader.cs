@@ -1,5 +1,5 @@
 //
-// Encog(tm) Core v3.2 - .Net Version
+// Encog(tm) Core v3.3 - .Net Version
 // http://www.heatonresearch.com/encog/
 //
 // Copyright 2008-2014 Heaton Research, Inc.
@@ -19,6 +19,7 @@
 // For more information on Heaton Research copyrights, licenses 
 // and trademarks visit:
 // http://www.heatonresearch.com/copyright
+//
 using System;
 using System.Collections.Generic;
 using Encog.ML.Data.Market.Loader;

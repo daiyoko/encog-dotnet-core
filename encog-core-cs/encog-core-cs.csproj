@@ -44,6 +44,10 @@
     <AssemblyOriginatorKeyFile>Encog.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MySql.Data.6.9.5\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -340,6 +344,7 @@
     <Compile Include="ML\Data\Buffer\CODEC\ArrayDataCODEC.cs" />
     <Compile Include="ML\Data\Buffer\CODEC\CSVDataCODEC.cs" />
     <Compile Include="ML\Data\Buffer\CODEC\IDataSetCODEC.cs" />
+    <Compile Include="ML\Data\Buffer\CODEC\MySQLCODEC.cs" />
     <Compile Include="ML\Data\Buffer\CODEC\NeuralDataSetCODEC.cs" />
     <Compile Include="ML\Data\Buffer\CODEC\SQLCODEC.cs" />
     <Compile Include="ML\Data\Buffer\EncogEGBFile.cs" />
@@ -365,9 +370,11 @@
       <DependentUpon>CSVFormLoader.cs</DependentUpon>
     </Compile>
     <Compile Include="ML\Data\Market\Loader\CSVLoader.cs" />
+    <Compile Include="ML\Data\Market\Loader\DukascopyLoader.cs" />
     <Compile Include="ML\Data\Market\Loader\IMarketLoader.cs" />
     <Compile Include="ML\Data\Market\Loader\LoadedMarketData.cs" />
     <Compile Include="ML\Data\Market\Loader\LoaderError.cs" />
+    <Compile Include="ML\Data\Market\Loader\OandaFinanceLoader.cs" />
     <Compile Include="ML\Data\Market\Loader\YahooFinanceLoader.cs" />
     <Compile Include="ML\Data\Market\MarketDataDescription.cs" />
     <Compile Include="ML\Data\Market\MarketDataType.cs" />
@@ -378,6 +385,7 @@
     <Compile Include="ML\Data\MLDataError.cs" />
     <Compile Include="ML\Data\Specific\BiPolarMLData.cs" />
     <Compile Include="ML\Data\Specific\CSVMLDataSet.cs" />
+    <Compile Include="ML\Data\Specific\MySQLMLDataSet.cs" />
     <Compile Include="ML\Data\Specific\SQLMLDataSet.cs" />
     <Compile Include="ML\Data\Dynamic\IDynamicMLDataProvider.cs" />
     <Compile Include="ML\Data\Dynamic\Providers\SlidingWindowMLDataProvider.cs" />
@@ -951,8 +959,10 @@
     <EmbeddedResource Include="Resources\analyst.csv" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Encog.snk" />
     <EmbeddedResource Include="Resources\mt4.mql4" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

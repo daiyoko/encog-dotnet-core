@@ -84,8 +84,10 @@
     <Compile Include="ML\Data\Buffer\TestBufferedNeuralDataSet.cs" />
     <Compile Include="ML\Data\Market\CSVLoaderTest.cs" />
     <Compile Include="ML\Data\Market\TestMarketData.cs" />
+    <Compile Include="ML\Data\Market\TestOandaLoader.cs" />
     <Compile Include="ML\Data\Market\TestYahooLoader.cs" />
     <Compile Include="ML\Data\Specific\TestCSVNeuralData.cs" />
+    <Compile Include="ML\Data\Specific\TestMySQLDataSet.cs" />
     <Compile Include="ML\Data\Specific\TestSQLDataSet.cs" />
     <Compile Include="ML\Data\Dynamic\TestDynamic.cs" />
     <Compile Include="ML\Data\Temporal\TestTemporal.cs" />
